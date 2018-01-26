@@ -8,6 +8,5 @@ namespace DotNetPaging.EFCore
         public string Title { get; set; }
         public string Company { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public string Body { get; set; }
     }
 }
