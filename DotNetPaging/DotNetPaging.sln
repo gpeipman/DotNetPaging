@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.EFCore", "DotNetPaging.EFCore\DotNetPaging.EFCore.csproj", "{3E5B4900-8BD7-430D-A217-3F2FFE658735}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Files", "External Files", "{3DCA784C-856D-4CFA-8987-DF5FF47B6D32}"
+	ProjectSection(SolutionItems) = preProject
+		External Files\mssql.sql = External Files\mssql.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
