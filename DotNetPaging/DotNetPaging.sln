@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Files", "External Files", "{3DCA784C-856D-4CFA-8987-DF5FF47B6D32}"
 	ProjectSection(SolutionItems) = preProject
 		External Files\mssql.sql = External Files\mssql.sql
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global
