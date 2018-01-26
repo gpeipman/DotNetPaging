@@ -21,6 +21,7 @@ namespace DotNetPaging.AspNetCore.Controllers
             var releases = _dataContext.PressReleases
                                        .OrderByDescending(p => p.ReleaseDate)
                                        .GetPaged(page, 10);
+
             return View(releases);
         }
 
@@ -29,6 +30,7 @@ namespace DotNetPaging.AspNetCore.Controllers
             var releases = await _dataContext.PressReleases
                                              .OrderByDescending(p => p.ReleaseDate)
                                              .GetPagedAsync(page, 10);
+
             return View("Index", releases);
         }
 
@@ -36,7 +38,7 @@ namespace DotNetPaging.AspNetCore.Controllers
         {
             var releases = await _dataContext.PressReleases
                                              .OrderByDescending(p => p.ReleaseDate)
-                                             .GetPagedAsync(page, 10);
+                                             .GetPagedAsync<PressRelease, PressReleaseListItem>(page, 10);
             return View(releases);
         }
 

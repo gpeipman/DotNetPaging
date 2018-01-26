@@ -1,4 +1,5 @@
-﻿using DotNetPaging.EFCore;
+﻿using AutoMapper;
+using DotNetPaging.EFCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace DotNetPaging.AspNetCore
             services.AddDbContext<DotNetPagingDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddAutoMapper();
             services.AddMvc();
         }
 
