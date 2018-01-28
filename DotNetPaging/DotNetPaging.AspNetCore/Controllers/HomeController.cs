@@ -31,7 +31,7 @@ namespace DotNetPaging.AspNetCore.Controllers
                                              .OrderByDescending(p => p.ReleaseDate)
                                              .GetPagedAsync(page, 10);
 
-            return View("Index", releases);
+            return View(releases);
         }
 
         public async Task<IActionResult> AutoMapper(int page = 1)

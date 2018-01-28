@@ -1,4 +1,11 @@
 ﻿@model PagedResult<PressRelease>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Default paging</h2>
+
+<p>Results on this page are queried using synchronous method calls of Entity Framework Core.</p>
 
 <table class="table">
     <thead>

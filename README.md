@@ -10,5 +10,5 @@ Sample solution contains the following examples:
 * Extension methods for paged data (IQueryable)
 * Extension methods for pages data with AutoMapper mapping
 * ASP.NET Core 2.0 web application 
-* Model-independent pager view component
+* General pager view component
 * Database script for SQL Server

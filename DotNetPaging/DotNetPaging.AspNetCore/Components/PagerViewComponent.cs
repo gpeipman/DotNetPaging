@@ -5,9 +5,9 @@ namespace DotNetPaging.AspNetCore.Components
 {
     public class PagerViewComponent : ViewComponent
     {
-        public Task<IViewComponentResult> InvokeAsync(PagedResultBase result)
+        public async Task<IViewComponentResult> InvokeAsync(PagedResultBase result)
         {
-            return Task.FromResult((IViewComponentResult)View("Default", result));
+            return View("Default", result);
         }
     }
 }
