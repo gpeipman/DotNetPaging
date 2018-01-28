@@ -1,6 +1,6 @@
 ﻿@model PagedResultBase
 @{
-    var urlTemplate = Url.Action() + "?page={0}";
+    var urlTemplate = Model.LinkTemplate;
     var request = ViewContext.HttpContext.Request;
     foreach (var key in request.Query.Keys)
     {
@@ -17,14 +17,11 @@
 }
 
 <div class="row">
-    @*<div class="col-md-4 col-sm-4 items-info">
-            Items @Model.FirstRowOnPage to @Model.LastRowOnPage of @Model.RowCount total
-        </div>*@
     <div class="col-md-8 col-sm-8">
         @if (Model.PageCount > 1)
         {
             <ul class="pagination">
-                <li><a href="@urlTemplate.Replace("{0}", "1")">&laquo;</a></li>
+                <li><a href="@urlTemplate.Replace("%7B0%7D", "1")">&laquo;</a></li>
                 @for (var i = startIndex; i <= finishIndex; i++)
                 {
                     @if (i == Model.CurrentPage)
@@ -35,10 +32,10 @@
                     else
                     {
 
-                        <li><a href="@urlTemplate.Replace("{0}", i.ToString())">@i</a></li>
+                        <li><a href="@urlTemplate.Replace("%7B0%7D", i.ToString())">@i</a></li>
                     }
                 }
-                <li><a href="@urlTemplate.Replace("{0}", Model.PageCount.ToString())">&raquo;</a></li>
+                <li><a href="@urlTemplate.Replace("%7B0%7D", Model.PageCount.ToString())">&raquo;</a></li>
             </ul>}
     </div>
 </div>

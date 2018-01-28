@@ -11,6 +11,7 @@ namespace DotNetPaging
         public int PageSize { get; set; }
 
         public int RowCount { get; set; }
+        public string LinkTemplate { get; set; }
 
         public int FirstRowOnPage
         {

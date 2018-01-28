@@ -45,6 +45,9 @@ namespace DotNetPaging.AspNetCore
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                        name: "defaultPaged",
+                        template: "{controller=Home}/{action=Index}/page/{page}");
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
