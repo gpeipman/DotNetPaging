@@ -21,7 +21,6 @@ namespace DotNetPaging.AspNetCore.Controllers
             var releases = _dataContext.PressReleases
                                        .OrderByDescending(p => p.ReleaseDate)
                                        .GetPaged(page, 10);
-
             return View(releases);
         }
 

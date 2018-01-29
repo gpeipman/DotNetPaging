@@ -1,0 +1,44 @@
+﻿@model PagedResultBase
+@using DotNetPaging
+
+@{
+    var urlTemplate = Url.Action(ViewContext.RouteData.Values["action"].ToString(), new { page = "{0}" });
+    var request = ViewContext.HttpContext.Request;
+    foreach (var key in request.QueryString.Keys)
+    {
+        if (key.ToString() == "page")
+        {
+            continue;
+        }
+
+        urlTemplate += "&" + key + "=" + request.QueryString[key.ToString()];
+    }
+
+    var startIndex = Math.Max(Model.CurrentPage - 5, 1);
+    var finishIndex = Math.Min(Model.CurrentPage + 5, Model.PageCount);
+}
+
+<div class="row">
+    <div class="col-md-8 col-sm-8">
+        @if (Model.PageCount > 1)
+        {
+            <ul class="pagination">
+                <li><a href="@urlTemplate.Replace("%7B0%7D", "1")">&laquo;</a></li>
+                @for (var i = startIndex; i <= finishIndex; i++)
+                {
+                    if (i == Model.CurrentPage)
+                    {
+
+                        <li><span>@i</span></li>
+                    }
+                    else
+                    {
+
+                        <li><a href="@urlTemplate.Replace("%7B0%7D", i.ToString())">@i</a></li>
+                    }
+                }
+                <li><a href="@urlTemplate.Replace("%7B0%7D", Model.PageCount.ToString())">&raquo;</a></li>
+            </ul>
+        }
+    </div>
+</div>

@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.Infrastructure", "DotNetPaging.Infrastructure\DotNetPaging.Infrastructure.csproj", "{9601FBAC-EA4B-4F11-844F-4EDE6C2D5181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetPaging.Infrastructure", "DotNetPaging.Infrastructure\DotNetPaging.Infrastructure.csproj", "{9601FBAC-EA4B-4F11-844F-4EDE6C2D5181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.AspNetCore", "DotNetPaging.AspNetCore\DotNetPaging.AspNetCore.csproj", "{7B402C75-31FD-4C15-A2B1-93E7F33657E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetPaging.AspNetCore", "DotNetPaging.AspNetCore\DotNetPaging.AspNetCore.csproj", "{7B402C75-31FD-4C15-A2B1-93E7F33657E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.EFCore", "DotNetPaging.EFCore\DotNetPaging.EFCore.csproj", "{3E5B4900-8BD7-430D-A217-3F2FFE658735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetPaging.EFCore", "DotNetPaging.EFCore\DotNetPaging.EFCore.csproj", "{3E5B4900-8BD7-430D-A217-3F2FFE658735}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Files", "External Files", "{3DCA784C-856D-4CFA-8987-DF5FF47B6D32}"
 	ProjectSection(SolutionItems) = preProject
 		External Files\mssql.sql = External Files\mssql.sql
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.AspNetMvc", "DotNetPaging.AspNetMvc\DotNetPaging.AspNetMvc.csproj", "{69198237-F0DC-4D23-8962-18EF28DFF063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.EF", "DotNetPaging.EF\DotNetPaging.EF.csproj", "{7DE34A02-111D-4963-AC11-B2F7FD37275B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{3E5B4900-8BD7-430D-A217-3F2FFE658735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5B4900-8BD7-430D-A217-3F2FFE658735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5B4900-8BD7-430D-A217-3F2FFE658735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69198237-F0DC-4D23-8962-18EF28DFF063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69198237-F0DC-4D23-8962-18EF28DFF063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69198237-F0DC-4D23-8962-18EF28DFF063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69198237-F0DC-4D23-8962-18EF28DFF063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE34A02-111D-4963-AC11-B2F7FD37275B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE34A02-111D-4963-AC11-B2F7FD37275B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE34A02-111D-4963-AC11-B2F7FD37275B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE34A02-111D-4963-AC11-B2F7FD37275B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
