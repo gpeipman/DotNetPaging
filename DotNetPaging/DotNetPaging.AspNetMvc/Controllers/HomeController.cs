@@ -13,11 +13,11 @@ namespace DotNetPaging.AspNetMvc.Controllers
             _dataContext = dataContext;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
             var data = _dataContext.PressReleases
                                    .OrderByDescending(p => p.ReleaseDate)
-                                   .GetPaged(1, 10);
+                                   .GetPaged(page, 10);
             return View(data);
         }
     }
