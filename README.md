@@ -9,8 +9,9 @@ Sample solution contains the following examples:
 * Pager classes for data and presentation layer
 * Extension methods for paged data (IQueryable)
 * Extension methods for pages data with AutoMapper mapping
-* ASP.NET Core 2.0 web application 
-* General pager view component
+* ASP.NET Core 2.0 web application (Entity Framework Core)
+* ASP.NET MVC (Entity Framework)
+* Pager view component and partial view
 * Database script for SQL Server
 
 # Read more about paging
