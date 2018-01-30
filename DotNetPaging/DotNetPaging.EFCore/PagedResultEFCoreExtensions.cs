@@ -31,7 +31,7 @@ namespace DotNetPaging
             var result = new PagedResult<U>();
             result.CurrentPage = page;
             result.PageSize = pageSize;
-            result.RowCount = query.Count();
+            result.RowCount = await query.CountAsync();
 
             var pageCount = (double)result.RowCount / pageSize;
             result.PageCount = (int)Math.Ceiling(pageCount);
