@@ -11,7 +11,7 @@ Sample solution contains the following examples:
 * Extension methods for pages data with AutoMapper mapping
 * ASP.NET Core 2.0 web application (Entity Framework Core)
 * ASP.NET MVC (Entity Framework)
-* Pager view component and partial view
+* Pager view component, tag helper and partial view
 * Database script for SQL Server
 
 # Read more about paging

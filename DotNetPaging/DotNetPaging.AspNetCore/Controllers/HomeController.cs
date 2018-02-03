@@ -41,18 +41,12 @@ namespace DotNetPaging.AspNetCore.Controllers
             return View(releases);
         }
 
-        public IActionResult About()
+        public async Task<IActionResult> TagHelper(int page = 1)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            var releases = await _dataContext.PressReleases
+                                             .OrderByDescending(p => p.ReleaseDate)
+                                             .GetPagedAsync(page, 10);
+            return View(releases);
         }
 
         public IActionResult Error()
