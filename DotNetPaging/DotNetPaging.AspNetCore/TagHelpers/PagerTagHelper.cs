@@ -56,6 +56,7 @@ namespace DotNetPaging.AspNetCore.TagHelpers
             var startIndex = Math.Max(Model.CurrentPage - 5, 1);
             var finishIndex = Math.Min(Model.CurrentPage + 5, Model.PageCount);
 
+            output.TagName = "";
             output.Content.AppendHtml("<ul class=\"pagination\">");
             AddPageLink(output, string.Format(urlTemplate, 1), "&laquo;");
 
