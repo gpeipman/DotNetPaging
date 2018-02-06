@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.AspNetMvc", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPaging.EF", "DotNetPaging.EF\DotNetPaging.EF.csproj", "{7DE34A02-111D-4963-AC11-B2F7FD37275B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNetCore", "DotNetCore", "{9A765EF3-967A-49CC-A6B1-F62B6FF7CD59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNetFull", "DotNetFull", "{92C32780-C5B6-4764-9FFF-449F6FF63D43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B402C75-31FD-4C15-A2B1-93E7F33657E4} = {9A765EF3-967A-49CC-A6B1-F62B6FF7CD59}
+		{3E5B4900-8BD7-430D-A217-3F2FFE658735} = {9A765EF3-967A-49CC-A6B1-F62B6FF7CD59}
+		{69198237-F0DC-4D23-8962-18EF28DFF063} = {92C32780-C5B6-4764-9FFF-449F6FF63D43}
+		{7DE34A02-111D-4963-AC11-B2F7FD37275B} = {92C32780-C5B6-4764-9FFF-449F6FF63D43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0B948FA-5B55-4FF1-B089-D3A5C4402330}
