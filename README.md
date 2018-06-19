@@ -19,5 +19,5 @@ Sample solution contains the following examples:
 More about my work on ASP.NET/ASP.NET Core paging can be found in these blog posts:
 
 * [Building Pager view component](http://gunnarpeipman.com/2016/07/building-pager-view-component/) (Gunnar Peipman)
-* [Paging with Entity Framework Core](http://http://gunnarpeipman.com/2017/01/ef-core-paging/) (Gunnar Peipman)
+* [Paging with Entity Framework Core](http://gunnarpeipman.com/2017/01/ef-core-paging/) (Gunnar Peipman)
 * [Returning paged results from repositories using PagedResult](http://gunnarpeipman.com/2010/09/returning-paged-results-from-repositories-using-pagedresult/) (Gunnar Peipman)
