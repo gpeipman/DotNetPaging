@@ -22,7 +22,10 @@ namespace DotNetPaging.AspNetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DotNetPagingDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(
+                                            Configuration.GetConnectionString("DefaultConnection"), 
+                                            sqlServerOptions => sqlServerOptions.UseRowNumberForPaging()) //nedded only for SQL Server versions prior to SQL Server 2012
+                                        );
 
             services.AddAutoMapper();
             services.AddMvc();
