@@ -40,6 +40,11 @@ namespace DotNetPaging.AspNetCore.TagHelpers
                 return;
             }
 
+            //Number of pages to show in both sides of active page
+            // if you are to the beggining or to the end, and it is impossible to take PAGES_TO_SHOW (the value of variable as number) pages
+            // you can take them from the other side of active page to have always the same number of pages in pagination
+            var PAGES_TO_SHOW = 5;
+
             var action = ViewContext.RouteData.Values["action"].ToString();
             var urlTemplate = WebUtility.UrlDecode(_urlHelper.Action(action, new { page = "{0}" }));
             var request = _httpContext.Request;
@@ -53,8 +58,8 @@ namespace DotNetPaging.AspNetCore.TagHelpers
                 urlTemplate += "&" + key + "=" + request.Query[key];
             }
 
-            var startIndex = Math.Max(Model.CurrentPage - 5, 1);
-            var finishIndex = Math.Min(Model.CurrentPage + 5, Model.PageCount);
+            var startIndex = Math.Max((Model.CurrentPage - PAGES_TO_SHOW) - Math.Max(PAGES_TO_SHOW - (Model.PageCount - Model.CurrentPage), 0), 1);
+            var finishIndex = Math.Min(Model.CurrentPage + PAGES_TO_SHOW + Math.Max(PAGES_TO_SHOW - Model.CurrentPage + 1, 0), Model.PageCount);
 
             output.TagName = "";
             output.Content.AppendHtml("<ul class=\"pagination\">");
