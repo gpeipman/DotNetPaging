@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using DotNetPaging.AspNetCore.Models;
 using DotNetPaging.EFCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,8 +26,15 @@ namespace DotNetPaging.AspNetCore
             services.AddDbContext<DotNetPagingDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddAutoMapper();
-            services.AddMvc();
+            services.AddHttpContextAccessor();
+            services.AddAutoMapper(GetType().Assembly);
+
+            Mapper.Initialize(cfg =>
+            {
+                cfg.AddProfile<MappingProfile>();
+            });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
@@ -44,7 +53,6 @@ namespace DotNetPaging.AspNetCore
             }
 
             app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
