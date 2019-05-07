@@ -78,9 +78,9 @@ namespace DotNetPaging.AspNetCore.TagHelpers
 
         private void AddPageLink(TagHelperOutput output, string url, string text)
         {            
-            output.Content.AppendHtml("<li><a href=\"");
+            output.Content.AppendHtml("<li  class=\"page-item\" ><a href=\"");
             output.Content.AppendHtml(url);
-            output.Content.AppendHtml("\">");
+            output.Content.AppendHtml("\" class=\"page-link\">");
             output.Content.AppendHtml(text);
             output.Content.AppendHtml("</a>");
             output.Content.AppendHtml("</li>");
@@ -88,10 +88,9 @@ namespace DotNetPaging.AspNetCore.TagHelpers
 
         private void AddCurrentPageLink(TagHelperOutput output, int page)
         {
-            output.Content.AppendHtml("<li class=\"active\">");
-            output.Content.AppendHtml("<span>");
+            output.Content.AppendHtml("<li class=\"page-item active\"><a class=\"page-link\">");
             output.Content.AppendHtml(page.ToString());
-            output.Content.AppendHtml("</span>");
+            output.Content.AppendHtml(" <span class=\"sr-only\">(current)</span>");
             output.Content.AppendHtml("</li>");
         }
     }
