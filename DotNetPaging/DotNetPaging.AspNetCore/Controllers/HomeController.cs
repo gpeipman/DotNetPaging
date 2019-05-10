@@ -10,6 +10,7 @@ namespace DotNetPaging.AspNetCore.Controllers
     public class HomeController : Controller
     {
         private readonly DotNetPagingDbContext _dataContext;
+        
 
         public HomeController(DotNetPagingDbContext dataContext)
         {

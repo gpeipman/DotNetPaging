@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DotNetPaging.EFCore\DotNetPaging.EFCore.csproj" />
     <ProjectReference Include="..\DotNetPaging.Infrastructure\DotNetPaging.Infrastructure.csproj" />
+    <ProjectReference Include="..\DotNetPaging.NHibernate\DotNetPaging.NHibernate.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,30 @@
+﻿@model PagedResult<DotNetPaging.NHibernate.PressRelease>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>NHibernate LINQ</h2>
+
+<p>Results on this page are queried using asynchronous method calls of NHibernate.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var release in Model.Results)
+        {
+            <tr>
+                <td>@release.ReleaseDate.ToShortDateString()</td>
+                <td>@release.Company</td>
+                <td>@release.Title</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@(await Component.InvokeAsync<PagerViewComponent>(Model))
